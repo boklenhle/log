@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<main>
+    <body>
+// Something in html that say's {InputName}'s Log in nicer font and looks not like shit
+    <h1>`{InputName}'s Log`</h1>
+//backticks don't work on h1 and curly brackets don't either
+    <div id="AddingDescription">
+//want descriptions to far right and log centered
+//will have main descriptions where they can just click radio and submit to log
+        <input type="text" placeholder="Description" id="Description">
+        <button type="submit" id="AddButton">Add</button>
+        <button type="submit" id="LogButtonTop">Log</button>
+
+    </div><br>
+    <div id="descriptiondiv">
+        <input type="radio" id="call">
+            <label for="call">Call</label><br>
+        <input type="radio" id="case">
+            <label for="case">Case</label><br>
+    </div>
+    <div id="logdiv">
+
+    </div>
+    </body>
+
+	<script type="text/javascript" src="log.js"></script>
+</main>
+</html>
