@@ -1,0 +1,12 @@
+
+body {background-color: rgb(224, 224, 224);
+}
+
+div {background-color: white;
+}
+
+#logdiv {text-align: center;
+}
+
+#descriptiondiv {text-align: right;
+}
