@@ -18,9 +18,21 @@ h1.appendChild(document.createTextNode(InputName.value));
 h1div.appendChild(h1);
 }
 
+Makeh12 => {
+    var h1div = document.getElementById("title");
+var InputName = prompt(`What's your name?`);
+var h1 = document.createElement("h1");
+//runs prompt to get name from user
+InputName;
+//creates an h1 with user input as text
+h1.appendChild(document.createTextNode(InputName.value));
+// h1 attached to parent div
+h1div.appendChild(h1);
+}
 
+Makeh12();
 //the actual program
-MakeH1();
+
 // This adds a list item if there's stuff typed and you click 'enter' 
 //button.addEventListener("click", addAfterClick);
 
