@@ -23,7 +23,7 @@ Makeh12 => {
 var InputName = prompt(`What's your name?`);
 var h1 = document.createElement("h1");
 //runs prompt to get name from user
-InputName;
+InputName
 //creates an h1 with user input as text
 h1.appendChild(document.createTextNode(InputName.value));
 // h1 attached to parent div
