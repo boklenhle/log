@@ -30,9 +30,9 @@ h1.appendChild(document.createTextNode(InputName.value));
 h1div.appendChild(h1);
 }
 
-Makeh12();
-//the actual program
 
+//the actual program
+Makeh12();
 // This adds a list item if there's stuff typed and you click 'enter' 
 //button.addEventListener("click", addAfterClick);
 
