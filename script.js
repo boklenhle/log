@@ -19,10 +19,12 @@ h1.appendChild(document.createTextNode(InputName.value));
 }
 
 
+//the actual program
+MakeH1();
 // This adds a list item if there's stuff typed and you click 'enter' 
-button.addEventListener("click", addAfterClick);
+//button.addEventListener("click", addAfterClick);
 
 // this adds a list item if there's something typed and you press 'enter' on keyboard. 
-input.addEventListener("keypress", addAfterKeypress);
+//input.addEventListener("keypress", addAfterKeypress);
 //clears user input
-whatIwanttoclear.value = "";
+//whatIwanttoclear.value = "";
