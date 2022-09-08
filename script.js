@@ -2,7 +2,7 @@ var InputName = prompt(`What's your name?`)
 
 InputName;
 
-function name {
+name => {
     return InputName.value
 }
 //text box with place holder "description" need submit button that recognizes listenuserinput for click and enter button and then clears the textbox
