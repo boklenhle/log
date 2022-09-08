@@ -5,17 +5,17 @@
 
 //needs to be a delete button for any added logs
 MakeH1 => {
-//creates a var to prompy user to enter their name
+//creates a var to prompt user to enter their name
 var InputName = prompt(`What's your name?`);
 //IDs the div we want to stick the Name in
 var h1div = document.getElementById("title");
 //names var to create an h1 element
 var h1 = document.createElement("h1");
 InputName;
-//appends the new h1 to the div we want it to go in
-h1div.appendChild(h1);
 //creates an h1 and appends the text the user entered into it.
 h1.appendChild(document.createTextNode(InputName.value));
+//appends the new h1 to the div we want it to go in
+h1div.appendChild(h1);
 }
 
 
