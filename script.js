@@ -28,6 +28,7 @@ InputName
 h1.appendChild(document.createTextNode(InputName.value));
 // h1 attached to parent div
 h1div.appendChild(h1);
+console.log(`Makeh12`);
 }
 
 
