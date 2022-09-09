@@ -1,0 +1,23 @@
+{
+  "name": "log",
+  "version": "1.0.0",
+  "description": "log project",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boklenhle/log.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boklenhle/log/issues"
+  },
+  "homepage": "https://github.com/boklenhle/log#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
