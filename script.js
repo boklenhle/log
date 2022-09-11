@@ -1,5 +1,7 @@
 var input = document.getElementById("description")
 const currentDate = new Date();
+var t = currentDate.toString()
+
 
 const currentDayOfMonth = currentDate.getDate();
 const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
@@ -33,7 +35,7 @@ function CreateFromTextbox() {
     var li = document.createElement("li");
     var button = document.getElementById("button");
     //created line with input as its text
-	li.appendChild(document.createTextNode(input.value + ` ` + dateString));
+	li.appendChild(document.createTextNode(input.value + ` ` + dateString + ` ` + t));
     //cleared description box
 	input.value = "";
 	// li attached to parent div
