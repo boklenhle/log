@@ -1,43 +1,77 @@
+var input = document.getElementById("description")
+const currentDate = new Date();
+
+const currentDayOfMonth = currentDate.getDate();
+const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
+const currentYear = currentDate.getFullYear();
+
+const dateString = (currentMonth + 1) + "-" + currentDayOfMonth + "-" + currentYear;
+// "11-2-2022"
+
+//This determines if textbox is empty or not
+function inputLength() {
+	return input.value.length;
+}
+//this function get's the user's name and inserts it into the text I want for the h1
+function getName(input = prompt(`What is your name?`)) {
+    return `${input}'s Log`
+}
+//function gets the user's input for the name and inserts it into the rest of the header text and then creates a h1 element and sticks it into the header div
+function makeTitle() {
+    var h1div = document.getElementById("title");
+var h1 = document.createElement("h1");
+//creates an h1 with user input as text
+h1.appendChild(document.createTextNode(getName()));
+// h1 attached to parent div
+h1div.appendChild(h1);
+}
+
+//this is working great!
+//it adds the input from the text box to the bottom of a ul 
+function CreateFromTextbox() {
+    var list = document.getElementById("list");
+    var li = document.createElement("li");
+    var button = document.getElementById("button");
+    //created line with input as its text
+	li.appendChild(document.createTextNode(input.value + ` ` + dateString));
+    //cleared description box
+	input.value = "";
+	// li attached to parent div
+	list.appendChild(li);
+}
+
+//this is working great!
+function addAfterClick() {
+        if (inputLength() > 0) {
+            CreateFromTextbox();
+        }
+    }
+
+    function addListAfterKeypress(event) {
+        if (inputLength() > 0 && event.keyCode === 13) {
+            CreateFromTextbox();
+        }
+    }
+
+
+
 //text box with place holder "description" need submit button that recognizes listenuserinput for click and enter button and then clears the textbox
 //will add description and time stamp
 
 //needs to be a way to edit time stamp (for if you forget to add one)
 
 //needs to be a delete button for any added logs
-MakeH1 => {
-//creates a var to prompt user to enter their name
-var InputName = prompt(`What's your name?`);
-//IDs the div we want to stick the Name in
-var h1div = document.getElementById("title");
-//names var to create an h1 element
-var h1 = document.createElement("h1");
-InputName;
-//creates an h1 and appends the text the user entered into it.
-h1.appendChild(document.createTextNode(InputName.value));
-//appends the new h1 to the div we want it to go in
-h1div.appendChild(h1);
-}
 
-Makeh12 => {
-    var h1div = document.getElementById("title");
-var InputName = prompt(`What's your name?`);
-var h1 = document.createElement("h1");
-//runs prompt to get name from user
-InputName
-//creates an h1 with user input as text
-h1.appendChild(document.createTextNode(InputName.value));
-// h1 attached to parent div
-h1div.appendChild(h1);
-console.log(`Makeh12`);
-}
 
 
 //the actual program
-Makeh12();
-// This adds a list item if there's stuff typed and you click 'enter' 
-//button.addEventListener("click", addAfterClick);
+
+//this makes the h1
+makeTitle();
+//this listens to if the 'log' button is clicked and adds the info in the description to a line item in the ul. 
+//WORKING!!
+button.addEventListener("click", addAfterClick);
 
 // this adds a list item if there's something typed and you press 'enter' on keyboard. 
-//input.addEventListener("keypress", addAfterKeypress);
-//clears user input
-//whatIwanttoclear.value = "";
+input.addEventListener("keypress", addListAfterKeypress);
+// This adds a list item if there's stuff typed and you click 'enter' 
