@@ -1,5 +1,12 @@
 var input = document.getElementById("description")
+const currentDate = new Date();
 
+const currentDayOfMonth = currentDate.getDate();
+const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
+const currentYear = currentDate.getFullYear();
+
+const dateString = (currentMonth + 1) + "-" + currentDayOfMonth + "-" + currentYear;
+// "11-2-2022"
 
 //This determines if textbox is empty or not
 function inputLength() {
@@ -26,7 +33,7 @@ function CreateFromTextbox() {
     var li = document.createElement("li");
     var button = document.getElementById("button");
     //created line with input as its text
-	li.appendChild(document.createTextNode(input.value));
+	li.appendChild(document.createTextNode(input.value + ` ` + dateString));
     //cleared description box
 	input.value = "";
 	// li attached to parent div
@@ -45,6 +52,8 @@ function addAfterClick() {
             CreateFromTextbox();
         }
     }
+
+
 
 //text box with place holder "description" need submit button that recognizes listenuserinput for click and enter button and then clears the textbox
 //will add description and time stamp
