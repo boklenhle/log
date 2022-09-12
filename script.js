@@ -31,15 +31,18 @@ h1div.appendChild(h1);
 //this is working great!
 //it adds the input from the text box to the bottom of a ul 
 function CreateFromTextbox() {
-    var list = document.getElementById("list");
-    var li = document.createElement("li");
+    var logs = document.getElementById("logs");
+    var tr = document.createElement("tr");
+    var td = document.createElement("td");
     var button = document.getElementById("button");
-    //created line with input as its text
-	li.appendChild(document.createTextNode(input.value + ` ` + dateString + ` ` + t));
+//needs to create a row (tr) then add an id with the row + # of row then have it add the td for the description, then another for the date, and another for the time
+    //logs.appendChild(tr);
+    //created new row in table that gets the description added into it from user input
+	logs.appendChild(tr.appendChild(td.appendChild(document.createTextNode(input.value))));
     //cleared description box
 	input.value = "";
 	// li attached to parent div
-	list.appendChild(li);
+	logs.appendChild(tr);
 }
 
 //this is working great!
