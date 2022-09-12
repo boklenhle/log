@@ -1,7 +1,7 @@
 var input = document.getElementById("description")
 const currentDate = new Date();
 var t = currentDate.toString()
-
+var i = 0;
 
 const currentDayOfMonth = currentDate.getDate();
 const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
@@ -28,21 +28,54 @@ h1.appendChild(document.createTextNode(getName()));
 h1div.appendChild(h1);
 }
 
+//WORKING
+function CreateRow() {
+    const logs = document.getElementById("logs");
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    var idatt = document.createAttribute("id");
+// Set the value of the class attribute:
+    idatt.value = `${i}`;
+logs.appendChild(tr.appendChild(td.appendChild(document.createTextNode(input.value))));
+input.value = "";
+tr.setAttributeNode(idatt);
+	// new row attached to parent table
+logs.appendChild(tr);
+i++
+}
+
+function CreateDate() {
+    var i = 0;
+    const td = document.createElement("td");
+    const tr = document.getElementById(`${i}`);
+    tr.appendChild(td.appendChild(document.createTextNode(dateString)));
+    i++;
+}
+
+function CreateTime() {
+    var i = 0;
+    const time = document.createElement("input")
+    i++;
+}
+
 //this is working great!
-//it adds the input from the text box to the bottom of a ul 
+//it adds the input from the text box to the bottom of the table
 function CreateFromTextbox() {
-    var logs = document.getElementById("logs");
-    var tr = document.createElement("tr");
-    var td = document.createElement("td");
-    var button = document.getElementById("button");
+    const logs = document.getElementById("logs");
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    const button = document.getElementById("button");
+    var idatt = document.createAttribute("id");
+// Set the value of the class attribute:
+idatt.value = `${i}`;
+//this is working
+    CreateRow();
+    //this is not
+   CreateDate();
+
+
 //needs to create a row (tr) then add an id with the row + # of row then have it add the td for the description, then another for the date, and another for the time
-    //logs.appendChild(tr);
-    //created new row in table that gets the description added into it from user input
-	logs.appendChild(tr.appendChild(td.appendChild(document.createTextNode(input.value))));
-    //cleared description box
-	input.value = "";
-	// li attached to parent div
-	logs.appendChild(tr);
+
 }
 
 //this is working great!
