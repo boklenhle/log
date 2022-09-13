@@ -73,7 +73,6 @@ idatt.value = `${i}`;
     //this is not
    CreateDate();
 
-
 //needs to create a row (tr) then add an id with the row + # of row then have it add the td for the description, then another for the date, and another for the time
 
 }
