@@ -19,6 +19,7 @@ function getName(input = prompt(`What is your name?`)) {
     return `${input}'s Log`
 }
 //function gets the user's input for the name and inserts it into the rest of the header text and then creates a h1 element and sticks it into the header div
+//DONE - WORKING
 function makeTitle() {
     var h1div = document.getElementById("title");
 var h1 = document.createElement("h1");
