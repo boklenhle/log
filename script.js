@@ -1,7 +1,10 @@
 var input = document.getElementById("description")
 const currentDate = new Date();
 var t = currentDate.toString()
-
+const begin = document.getElementById("begin")
+const breaks = document.getElementById("break")
+const lunch = document.getElementById("lunch")
+const end = document.getElementById("end")
 
 const currentDayOfMonth = currentDate.getDate();
 const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
@@ -59,6 +62,11 @@ function addAfterClick() {
         }
     }
 
+function AddBeginShift() {
+    //this needs to add a description - something like started work
+    //this also needs to add a time stamp for the time it was clicked
+    //the timestamp needs to be changeable and it needs to be reference-able
+}
 
 
 //text box with place holder "description" need submit button that recognizes listenuserinput for click and enter button and then clears the textbox
@@ -80,4 +88,6 @@ button.addEventListener("click", addAfterClick);
 
 // this adds a list item if there's something typed and you press 'enter' on keyboard. 
 input.addEventListener("keypress", addListAfterKeypress);
-// This adds a list item if there's stuff typed and you click 'enter' 
+// This adds a list item if there's stuff typed and you click 'enter'
+
+begin.addEventListener("click", AddBeginShift)
